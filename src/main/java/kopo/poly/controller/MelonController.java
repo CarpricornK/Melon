@@ -106,4 +106,125 @@ public class MelonController {
 
         return msg;
     }
+
+    @GetMapping(value = "melon/deleteSong2")
+    public String deleteSong() throws Exception {
+        log.info(this.getClass().getName() + "deleteSong Start!");
+
+        String msg;
+
+        int res = melonService.deleteSong();
+
+        if(res == 1) {
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName()+ ".deleteSong End!");
+
+        return msg;
+
+    }
+
+    @GetMapping(value = "melon/btsAddNickname")
+    public String btsAddField() throws Exception {
+        log.info(this.getClass().getName() + "btsaddnickname start!");
+
+        String msg;
+
+        int res = melonService.updateAddBTSNickname();
+
+        if (res == 1){
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName() + "btsaddnickname end!");
+
+        return msg;
+
+    }
+    @GetMapping(value = "melon/updateBTSName")
+    public String btsAddField2() throws Exception {
+        log.info(this.getClass().getName() + ".btsAddNickname Start!");
+
+        String msg;
+
+        int res = melonService.updateBTSName();
+
+        if (res == 1){
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName() + ".btsAddNickname END!");
+
+        return msg;
+
+    }
+
+    @GetMapping(value = "melon/btsAddMember")
+    public String btsAddMember() throws Exception{
+
+        log.info(this.getClass().getName() + ".btsAddMember Start");
+
+        String msg;
+
+        int res = melonService.updateAddBTSMember();
+
+        if (res == 1) {
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName() + ".btsAddMember END!");
+
+        return msg;
+    }
+
+
+    @GetMapping(value = "melon/updateManySong")
+    public String updateManySong() throws Exception {
+        log.info(this.getClass().getName() + ".updateManySong Start");
+
+        String msg;
+
+        int res = melonService.updateManySong();
+
+        if (res == 1){
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName() + ".updateManySong End");
+
+        return msg;
+    }
+
+    @GetMapping(value = "melon/deleteSong")
+    public String deleteOne() throws Exception {
+
+        log.info(this.getClass().getName() + ".deleteSong Start");
+
+        String msg;
+
+        int res = melonService.deleteSong();
+
+        if (res == 1) {
+            msg = "success";
+        } else {
+            msg = "fail";
+        }
+
+        log.info(this.getClass().getName() + ".deleteSong End");
+
+        return msg;
+
+    }
+
 }

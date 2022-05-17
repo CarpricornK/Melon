@@ -24,4 +24,16 @@ public interface IMelonService {
     List<MelonDTO> getSingerSong() throws Exception;
 
     int collectMelonSongMany() throws Exception;
+
+    int updateBTSName() throws Exception;
+
+    int deleteSong() throws Exception;
+
+    int updateAddBTSNickname() throws Exception;
+
+    int updateAddBTSMember() throws Exception;
+
+    int updateManySong() throws Exception;
+
+    int deleteOne() throws Exception;
 }

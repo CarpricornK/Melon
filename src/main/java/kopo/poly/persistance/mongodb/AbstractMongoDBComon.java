@@ -70,4 +70,16 @@ public abstract class AbstractMongoDBComon {
 
     }
 
+    protected boolean dropCollection(String colNm) {
+
+        boolean res = false;
+
+        if (mongodb.collectionExists(colNm)){
+            mongodb.dropCollection(colNm);
+            res = true;
+        }
+
+        return res;
+    }
+
 }
